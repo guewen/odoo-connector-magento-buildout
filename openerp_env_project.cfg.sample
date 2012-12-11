@@ -1,0 +1,20 @@
+[buildout]
+extends = buildout.cfg
+
+[erp_global]
+project = <project_name>
+version = 7.0
+current_instance = openerp_70_${source_profile:profile}_${erp_global:project}
+
+[source_profile]
+# trunk or stable : used for the path of sources branches
+profile = trunk
+
+[openerp]
+options.xmlrpc_port = 8101
+options.db_password = ooL6oew55
+options.running_env = dev
+
+gunicorn = direct
+
+openerp-web.company.url = 'http://www.camptocamp.com/'
