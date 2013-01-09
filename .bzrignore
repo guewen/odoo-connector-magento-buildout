@@ -1,0 +1,9 @@
+.installed.cfg
+bin
+develop-eggs
+downloads
+etc
+gunicorn_openerp.pid
+parts
+src
+var
