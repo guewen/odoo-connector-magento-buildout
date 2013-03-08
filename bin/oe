@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+# EASY-INSTALL-ENTRY-SCRIPT: 'openerp-command==0.0.0','console_scripts','oe'
+__requires__ = 'openerp-command==0.0.0'
+import sys
+from pkg_resources import load_entry_point
+
+sys.path[0:0] = [
+    '/home/guewen/.dotfiles/buildout/eggs/magento-0.1.4-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/PyChart-1.39-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/anybox.recipe.openerp-1.4.0-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/Babel-0.9.6-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/docutils-0.10-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/feedparser-5.1.1-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/gdata-2.0.16-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/Jinja2-2.6-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/lxml-2.3.3-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/Mako-0.6.2-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/mock-1.0.1-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/psutil-0.6.1-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/psycopg2-2.4.4-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/pydot-1.0.28-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/python_dateutil-1.5-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/python_ldap-2.4.9-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/python_openid-2.2.5-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/pytz-2012b-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/PyWebDAV-0.9.4.1-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/PyYAML-3.10-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/reportlab-2.5-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/simplejson-2.4.0-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/unittest2-0.5.1-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/vatnumber-1.0-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/vobject-0.8.1c-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/Werkzeug-0.8.3-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/xlwt-0.7.3-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/Pillow-1.7.7-py2.7-linux-x86_64.egg',
+    '/home/guewen/code/dev_instances/openerp_magento7/parts/server',
+    '/home/guewen/.dotfiles/buildout/eggs/gunicorn-0.17.2-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/distribute-0.6.34-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/pyparsing-1.5.6-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/MarkupSafe-0.15-py2.7-linux-x86_64.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/zc.buildout-1.5.2-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/zc.recipe.egg-1.3.2-py2.7.egg',
+    '/home/guewen/.dotfiles/buildout/eggs/suds-0.4-py2.7.egg',
+    '/home/guewen/code/dev_instances/openerp_magento7/parts/server',
+    '/home/guewen/code/dev_instances/openerp_magento7/parts/server/addons',
+    ]
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('openerp-command==0.0.0', 'console_scripts', 'oe')()
+    )
