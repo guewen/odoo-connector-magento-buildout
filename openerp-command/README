@@ -1,9 +1,0 @@
-See doc/openerp-command.rst for the documentation.
-
-TODO
-----
-
-- Make sure to have proper return code for success/failure.
-- `oe --help` is a mess (it seems argparse doesn't try to do something sensible).
-- Have a flag for `run-tests` to drop in the debugger (to be combined with
-  unittest2 fail-fast mode?).
