@@ -8,4 +8,5 @@ gunicorn_openerp.pid
 parts
 src
 var
-docs
+docs/connector/*
+docs/magentoerpconnect/*
