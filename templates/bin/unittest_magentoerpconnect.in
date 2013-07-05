@@ -1,0 +1,25 @@
+#!/bin/bash
+USAGE="Launch the unit tests of the connector module.
+\n
+run_tests_connector [options]\n
+\n
+Options:\n
+-h or --help: display this help\n
+-d: database\n
+-p: port\n
+(+ all the options from oe.)
+"
+
+OE=`dirname $0`/oe
+ROOTDIR=`dirname $0`/..
+DBNAME=${openerp:options.db_name}
+ADDONS_PATH=$${ROOTDIR}/parts/webclient/addons,$${ROOTDIR}/parts/addons,$${ROOTDIR}/parts/connector,$${ROOTDIR}/parts/e-commerce-addons,$${ROOTDIR}/parts/openerp-product-attributes,$${ROOTDIR}/parts/magentoerpconnect
+ADDONS=magentoerpconnect
+PORT=${openerp:options.xmlrpc_port}
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]
+then
+    echo -e $${USAGE}
+else
+    $${OE} run-tests --database=$${DBNAME} --port=$${PORT} --addons=$${ADDONS_PATH} -m $${ADDONS}
+fi
