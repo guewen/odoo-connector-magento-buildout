@@ -22,7 +22,9 @@ Running the build
 
 Just run ::
 
-  $ bin/buildout
+  $ bin/buildout -c openerp_magento7.cfg
+
+You can change or create your own configuration file as well.
 
 
 Starting OpenERP
@@ -32,9 +34,10 @@ Just run::
 
   $ bin/start_openerp
 
-Or in gunicorn mode::
+Or in multiprocessing mode::
 
-  $ bin/gunicorn_openerp
+  $ bin/start_openerp --workers=4
+  $ bin/start_connector_worker --workers=1  # start the connector jobs workers
 
 Using Supervisord
 -----------------
@@ -43,7 +46,7 @@ To launch supervisor::
 
   $ bin/supervisord
 
-This will launch automatically the process ``gunicorn_openerp`` In
+This will launch automatically the process ``start_openerp`` In
 addition, the process ``openerp`` to launch a server in standalone will
 be available in supervisor.
 
@@ -53,5 +56,24 @@ To manage the processes::
 
 In supervisorctl type ``help`` to see all commands.
 
-Is you want autostart for ``openerp`` instead of ``gunicorn_openerp``
-edit supervisor:programs in ``buildout.cfg``.
+Running the unit tests
+----------------------
+
+To run the unit tests of the ``connector`` module::
+
+  $ bin/unittest_connector
+
+To run the unit tests of the ``magentoerpconnect`` module::
+
+  $ bin/unittest_magentoerpconnect
+
+Generating the html documentation
+---------------------------------
+
+Run::
+
+  $ bin/sphinxbuilder_connector
+  $ bin/sphinxbuilder_magentoerpconnect
+
+The documentations will be built in ``docs/connector`` and
+``docs/magentoerpconnect``.

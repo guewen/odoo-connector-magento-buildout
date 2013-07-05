@@ -1,5 +1,6 @@
 .installed.cfg
 bin
+openerp-command
 develop-eggs
 downloads
 etc
@@ -7,3 +8,4 @@ gunicorn_openerp.pid
 parts
 src
 var
+docs
