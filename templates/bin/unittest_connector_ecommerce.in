@@ -1,7 +1,7 @@
 #!/bin/bash
-USAGE="Launch the unit tests for the connector module.
+USAGE="Launch the unit tests for the connector_ecommerce module.
 \n
-unittest_connector [options]\n
+unittest_connector_ecommerce [options]\n
 \n
 Options:\n
 -h or --help: display this help\n
@@ -13,8 +13,8 @@ Options:\n
 OE=`dirname $0`/oe
 ROOTDIR=`dirname $0`/..
 DBNAME=${openerp:options.db_name}
-ADDONS_PATH=$${ROOTDIR}/parts/webclient/addons,$${ROOTDIR}/parts/addons,$${ROOTDIR}/parts/connector
-ADDONS=connector
+ADDONS_PATH=$${ROOTDIR}/parts/webclient/addons,$${ROOTDIR}/parts/addons,$${ROOTDIR}/parts/connector,$${ROOTDIR}/parts/e-commerce-addons
+ADDONS=connector_ecommerce
 PORT=${openerp:options.xmlrpc_port}
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]

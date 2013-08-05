@@ -1,7 +1,7 @@
 #!/bin/bash
-USAGE="Launch the unit tests of the connector module.
+USAGE="Launch the unit tests for the magentoerpconnect module.
 \n
-run_tests_connector [options]\n
+unittest_magentoerpconnect [options]\n
 \n
 Options:\n
 -h or --help: display this help\n
