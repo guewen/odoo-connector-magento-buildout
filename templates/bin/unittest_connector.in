@@ -1,25 +1,2 @@
 #!/bin/bash
-USAGE="Launch the unit tests for the connector module.
-\n
-unittest_connector [options]\n
-\n
-Options:\n
--h or --help: display this help\n
--d: database\n
--p: port\n
-(+ all the options from oe.)
-"
-
-OE=`dirname $0`/oe
-ROOTDIR=`dirname $0`/..
-DBNAME=${openerp:options.db_name}
-ADDONS_PATH=$${ROOTDIR}/parts/webclient/addons,$${ROOTDIR}/parts/addons,$${ROOTDIR}/parts/connector
-ADDONS=connector
-PORT=${openerp:options.xmlrpc_port}
-
-if [ "$1" == "-h" ] || [ "$1" == "--help" ]
-then
-    echo -e $${USAGE}
-else
-    $${OE} run-tests --database=$${DBNAME} --port=$${PORT} --addons=$${ADDONS_PATH} -m $${ADDONS} $@
-fi
+echo "Deprecated: please use rununittests -m connector"
