@@ -61,11 +61,15 @@ Running the unit tests
 
 To run the unit tests of the ``connector`` module::
 
-  $ bin/unittest_connector
+  $ bin/rununittests -m connector
+
+To run the unit tests of the ``connector_ecommerce`` module::
+
+  $ bin/rununittests -m connector_ecommerce
 
 To run the unit tests of the ``magentoerpconnect`` module::
 
-  $ bin/unittest_magentoerpconnect
+  $ bin/rununittests -m magentoerpconnect
 
 Generating the html documentation
 ---------------------------------
