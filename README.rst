@@ -77,7 +77,7 @@ Generating the html documentation
 Run::
 
   $ bin/sphinxbuilder_connector
-  $ bin/sphinxbuilder_magentoerpconnect
+  $ bin/sphinxbuilder_connector_magento
 
 The documentations will be built in ``docs/connector`` and
-``docs/magentoerpconnect``.
+``docs/connector_magento``.
