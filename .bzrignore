@@ -9,4 +9,4 @@ parts
 src
 var
 docs/connector/*
-docs/magentoerpconnect/*
+docs/connector-magento/*
