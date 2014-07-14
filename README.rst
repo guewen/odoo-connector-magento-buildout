@@ -1,6 +1,8 @@
 Bootstrapping the buildout
 --------------------------
 
+Dependencies: http://pythonhosted.org/anybox.recipe.openerp/first_steps.html#installing-build-dependencies
+
 For a quick installation, just run::
 
   $ ./bootstrap.sh
