@@ -1,2 +1,0 @@
-#!/bin/bash
-echo "Deprecated: please use rununittests -m magentoerpconnect"
