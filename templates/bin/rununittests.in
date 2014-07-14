@@ -17,10 +17,8 @@ Options:\n
 
 OE=`dirname $0`/oe
 ROOTDIR=`dirname $0`/..
-DBNAME=${openerp:options.db_name}
 # extract the addons path from config file, openerp-command needs colons between paths
 ADDONS_PATH=$(sed -n 's/.*addons_path *= *\([^ ]*.*\)/\1/p' < $${ROOTDIR}/etc/openerp.cfg | sed 's/,/:/g')
-PORT=${openerp:options.xmlrpc_port}
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]
 then
@@ -29,6 +27,6 @@ elif [ "$1" == "--help-oe" ]
 then
     $${OE} run-tests --help
 else
-    $${OE} run-tests --database=$${DBNAME} --port=$${PORT} --addons=$${ADDONS_PATH} $@
+    $${OE} run-tests --addons=$${ADDONS_PATH} $@
 fi
 

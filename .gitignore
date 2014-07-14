@@ -9,6 +9,8 @@ etc
 src
 docs/connector/*
 docs/connector-magento/*
+upgrade.log
+upgrade.py
 
 # C extensions
 *.so

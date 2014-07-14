@@ -8,6 +8,11 @@ For a quick installation, just run::
   $ ./bootstrap.sh
   $ bin/buildout
 
+Then create a database and install Odoo::
+
+  $ createdb odoo_magento7
+  $ bin/start_openerp -d odoo_magento7 -i magentoerpconnect --stop-after-init
+
 You may be interested to read the full documentation on http://pythonhosted.org/anybox.recipe.openerp/
 
 Starting OpenERP
@@ -29,7 +34,7 @@ To launch supervisor::
 
   $ bin/supervisord
 
-This will launch automatically the process ``start_openerp`` In
+This will launch automatically the process ``start_openerp``. In
 addition, the process ``openerp`` to launch a server in standalone will
 be available in supervisor.
 
@@ -44,15 +49,15 @@ Running the unit tests
 
 To run the unit tests of the ``connector`` module::
 
-  $ bin/rununittests -m connector
+  $ bin/rununittests --database odoo_magento7 -m connector
 
 To run the unit tests of the ``connector_ecommerce`` module::
 
-  $ bin/rununittests -m connector_ecommerce
+  $ bin/rununittests --database odoo_magento7 -m connector_ecommerce
 
 To run the unit tests of the ``magentoerpconnect`` module::
 
-  $ bin/rununittests -m magentoerpconnect
+  $ bin/rununittests --database odoo_magento7 -m magentoerpconnect
 
 Generating the html documentation
 ---------------------------------
