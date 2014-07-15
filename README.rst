@@ -47,17 +47,36 @@ In supervisorctl type ``help`` to see all commands.
 Running the unit tests
 ----------------------
 
-To run the unit tests of the ``connector`` module::
+To run the unit tests of the ``connector`` module:
+
+With `oe`::
 
   $ bin/rununittests --database odoo_magento7 -m connector
 
-To run the unit tests of the ``connector_ecommerce`` module::
+With nose::
+
+  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector/connector/tests
+
+To run the unit tests of the ``connector_ecommerce`` module:
+
+With `oe`::
 
   $ bin/rununittests --database odoo_magento7 -m connector_ecommerce
 
-To run the unit tests of the ``magentoerpconnect`` module::
+With nose::
+
+  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector-ecommerce/connector_ecommerce/tests
+
+To run the unit tests of the ``magentoerpconnect`` module:
+
+With `oe`::
 
   $ bin/rununittests --database odoo_magento7 -m magentoerpconnect
+
+With nose::
+
+  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector-magento/magentoerpconnect/tests
+
 
 Generating the html documentation
 ---------------------------------
