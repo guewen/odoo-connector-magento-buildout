@@ -15,8 +15,8 @@ Then create a database and install Odoo::
 
 You may be interested to read the full documentation on http://pythonhosted.org/anybox.recipe.openerp/
 
-Starting OpenERP
-----------------
+Starting Odoo
+-------------
 
 Just run::
 
