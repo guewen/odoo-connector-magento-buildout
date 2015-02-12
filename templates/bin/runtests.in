@@ -1,0 +1,27 @@
+#!/bin/bash
+USAGE="Launch the Python tests for one or several modules using start_openerp with the appropriate flags.\n
+Yaml tests and Python tests are executed with this tool.\n
+\n
+rununittests -u module [options]\n
+\n
+Options:\n
+-u or --update: This option is the module to test.
+-h or --help: display this help\n
+--help-oe: openerp-command's help\n
+"
+
+START_OPENERP=`dirname $0`/start_openerp
+ROOTDIR=`dirname $0`/..
+# extract the addons path from config file, openerp-command needs colons between paths
+ADDONS_PATH=$(sed -n 's/.*addons_path *= *\([^ ]*.*\)/\1/p' < $${ROOTDIR}/etc/openerp.cfg | sed 's/,/:/g')
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ]
+then
+    echo -e $${USAGE}
+elif [ "$1" == "--help-oe" ]
+then
+    $${START_OPENERP} --help
+else
+    $${START_OPENERP} --workers=0 --test-enable --stop-after-init --log-level=test $@
+fi
+

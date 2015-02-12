@@ -10,8 +10,8 @@ For a quick installation, just run::
 
 Then create a database and install Odoo::
 
-  $ createdb odoo_magento7
-  $ bin/start_openerp -d odoo_magento7 -i magentoerpconnect --stop-after-init
+  $ createdb odoo_magento8
+  $ bin/start_openerp -d odoo_magento8 -i magentoerpconnect --stop-after-init
 
 You may be interested to read the full documentation on http://pythonhosted.org/anybox.recipe.openerp/
 
@@ -44,38 +44,38 @@ To manage the processes::
 
 In supervisorctl type ``help`` to see all commands.
 
-Running the unit tests
-----------------------
+Running the tests
+-----------------
 
 To run the unit tests of the ``connector`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento7 -m connector
+  $ bin/runtests --database odoo_magento8 -u connector
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector/connector/tests
+  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector/connector/tests
 
 To run the unit tests of the ``connector_ecommerce`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento7 -m connector_ecommerce
+  $ bin/runtests --database odoo_magento8 -u connector_ecommerce
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector-ecommerce/connector_ecommerce/tests
+  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-ecommerce/connector_ecommerce/tests
 
 To run the unit tests of the ``magentoerpconnect`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento7 -m magentoerpconnect
+  $ bin/runtests --database odoo_magento8 -u magentoerpconnect
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento7 -- --nologcapture --with-coverage --pdb parts/connector-magento/magentoerpconnect/tests
+  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-magento/magentoerpconnect/tests
 
 
 Generating the html documentation
