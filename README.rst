@@ -44,14 +44,14 @@ To manage the processes::
 
 In supervisorctl type ``help`` to see all commands.
 
-Running the unit tests
-----------------------
+Running the tests
+-----------------
 
 To run the unit tests of the ``connector`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento8 -m connector
+  $ bin/runtests --database odoo_magento8 -u connector
 
 With nose::
 
@@ -59,9 +59,9 @@ With nose::
 
 To run the unit tests of the ``connector_ecommerce`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento8 -m connector_ecommerce
+  $ bin/runtests --database odoo_magento8 -u connector_ecommerce
 
 With nose::
 
@@ -69,9 +69,9 @@ With nose::
 
 To run the unit tests of the ``magentoerpconnect`` module:
 
-With `oe`::
+With `start_openerp`::
 
-  $ bin/rununittests --database odoo_magento8 -m magentoerpconnect
+  $ bin/runtests --database odoo_magento8 -u magentoerpconnect
 
 With nose::
 
