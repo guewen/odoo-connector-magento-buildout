@@ -55,7 +55,7 @@ With `start_openerp`::
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector/connector/tests
+  $ bin/odoo_nosetests -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector/connector/tests
 
 To run the unit tests of the ``connector_ecommerce`` module:
 
@@ -65,7 +65,7 @@ With `start_openerp`::
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-ecommerce/connector_ecommerce/tests
+  $ bin/odoo_nosetests -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-ecommerce/connector_ecommerce/tests
 
 To run the unit tests of the ``magentoerpconnect`` module:
 
@@ -75,7 +75,7 @@ With `start_openerp`::
 
 With nose::
 
-  $ bin/nosetests-openerp -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-magento/magentoerpconnect/tests
+  $ bin/odoo_nosetests -d odoo_magento8 -- --nologcapture --with-coverage --pdb parts/connector-magento/magentoerpconnect/tests
 
 
 Generating the html documentation
